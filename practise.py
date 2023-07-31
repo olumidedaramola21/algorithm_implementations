@@ -87,3 +87,95 @@
 #     print(value)
 # for odd_num in range(1, 20, 3):
 #     print(odd_num)
+
+# cubed = [value**3 for value in range(1, 11)]
+# print(cubed)
+# # for value in range(1, 11):
+# #     cube = value**3
+# #     cubed.append(cube)
+# # print(cubed)
+
+# players = ["charles", "martina", "michael", "florence", "eli"]
+# print(players[-3:])
+
+# foods = ("bread", "rice", "yam", "beans")
+# foods[0] = "yam2"
+# for food in foods:
+#     print(food)
+
+# car = "subaru"
+# print("Is car == 'subaru'? I predict True.")
+# print(car == "subaru")
+
+# age = 12
+
+# if age < 4:
+#     price = 0
+# elif age < 18:
+#     price = 5
+# else:
+#     price = 10
+# print("Your admission cost is " + str(price) + ".")
+
+# alien_color = "red"
+# if alien_color == "green":
+#     print("player just earned 5 points.")
+# else:
+#     print("player just added 10points")
+
+# if alien_color == "red":
+#     print("player just earned 5 points")
+# if alien_color == "green":
+#     print("player just earned 10 points")
+
+# available_toppings = [
+#     "mushrooms",
+#     "olives",
+#     "green peppers",
+#     "pepperoni",
+#     "pineapple",
+#     "extra cheese",
+# ]
+# requested_toppings = ["mushrooms", "french fries", "extra cheese"]
+# for requested_topping in requested_toppings:
+#     if requested_topping in available_toppings:
+#         print("Adding " + requested_topping + ".")
+#     else:
+#         print("Sorry, we don't have " + requested_topping + ".")
+
+
+#  HELLO ADMIN ######## AND NO USERS
+# user_name = ["admin", "clock", "time", "nigeria", "mouse"]
+# # user_name = []
+
+# if len(user_name) == 0:
+#     print("We need to find some users!")
+# else:
+#     for user in user_name:
+#         if user == "admin":
+#             print("Hello " + user + ", would you like to see a status report?")
+#         else:
+#             print("Hello " + user + ", thank you for logging in again.")
+
+
+# #  ##########CHECKING USERNAME#########
+# current_users = [
+#     "abc@gmail.com",
+#     "bac@gmail.com",
+#     "cab@gmail.com",
+#     "acb@gmail.com",
+#     "bca@gmail.com",
+# ]
+# new_users = [
+#     "def@gmail.com",
+#     "efd@gmail.com",
+#     "cab@gmail.com",
+#     "abc@gmail.com",
+#     "fed@gmail.com",
+# ]
+# for new in new_users:
+#     if new.lower() in (current.lower() for current in current_users):
+#         print
+#         print("Username " + new + " already exits, enter a new username!")
+#     else:
+#         print("Username is avaible")
