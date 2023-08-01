@@ -194,3 +194,48 @@
 #         print(str(num) + "th")
 
 # ##########################DICTIONARIES###################
+
+# # ##########################ALIEN SPEED
+# alien_0 = {"x_position": 0, "y_position": 25, "speed": "medium"}
+# print("Original x-position: " + str(alien_0["x_position"]))
+# alien_0["speed"] = "old"
+
+# if alien_0["speed"] == "slow":
+#     x_increment = 1
+# elif alien_0["speed"] == "medium":
+#     x_increment = 2
+# else:
+#     x_increment = 3
+
+# alien_0["x_position"] = alien_0["x_position"] + x_increment
+
+# print("New x-position: " + str(alien_0["x_position"]))
+
+
+# favorite_programming = {"olumide": "python", "ade": "javascript", "femi": "c++"}
+
+# Olumide_information = {
+#     "first_name": "olumide",
+#     "last_name": "Daramola",
+#     "age": 21,
+#     "city": "akure",
+# }
+
+# for k, v in Olumide_information.items():
+#     print("\nK: " + k)
+#     print("V: " + str(v))
+
+favorite_languages = {"jen": "python", "sarah": "c", "edward": "ruby", "phil": "python"}
+
+friends = ["phil", "sarah"]
+for name in favorite_languages.keys():
+    print(name.title())
+
+    if name in friends:
+        print(
+            " Hi "
+            + name.title()
+            + ", I see your favorite language is "
+            + favorite_languages[name].title()
+            + "!"
+        )
