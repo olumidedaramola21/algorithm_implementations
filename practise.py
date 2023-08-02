@@ -225,17 +225,40 @@
 #     print("\nK: " + k)
 #     print("V: " + str(v))
 
-favorite_languages = {"jen": "python", "sarah": "c", "edward": "ruby", "phil": "python"}
+# favorite_languages = {"jen": "python", "sarah": "c", "edward": "ruby", "phil": "python"}
 
-friends = ["phil", "sarah"]
-for name in favorite_languages.keys():
-    print(name.title())
+# friends = ["phil", "sarah"]
+# for name in favorite_languages.keys():
+#     print(name.title())
 
-    if name in friends:
-        print(
-            " Hi "
-            + name.title()
-            + ", I see your favorite language is "
-            + favorite_languages[name].title()
-            + "!"
-        )
+#     if name in friends:
+#         print(
+#             " Hi "
+#             + name.title()
+#             + ", I see your favorite language is "
+#             + favorite_languages[name].title()
+#             + "!"
+#         )
+
+#  #########RIVERS###########
+# rivers = {"nile": "egypt", "yello": "china", "amazon": "south-america"}
+
+# for key, value in rivers.items():
+#     print("The " + key + " runs through " + value + ".")
+#     for key in rivers.keys():
+#         print(key)
+#     for value in rivers.values():
+#         print(value)
+
+# ############POLING##############
+# favorite_languages = {"jen": "python", "sarah": "c", "edward": "ruby", "phil": "python"}
+
+# friends = ["phil", "sarah", "miracle"]
+
+# for friend in friends:
+#     if friend not in favorite_languages.keys():
+#         print("I invite you to take the poll " + friend + ".")
+#     else:
+#         print("Thanky you for responding " + friend + ".")
+
+# #############
