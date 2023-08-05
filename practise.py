@@ -266,25 +266,121 @@
 # for value in range(5):
 #     print(value)
 
-aliens = []
+#
 
-for alien_number in range(30):
-    new_Alien = {"color": "green", "points": 5, "speed": "slow"}
-    aliens.append(new_Alien)
+# NESTING #
 
-for alien in aliens[0:3]:
-    if alien["color"] == "green":
-        alien["color"] = "yellow"
-        alien["speed"] = "medium"
-        alien["points"] = 10
-    elif alien["color"] == "yellow":
-        alien["color"] = "red"
-        alien["speed"] = "fast"
-        alien["points"] = 15
+# alien_0 = {"color": "green", "points": 5}
+# alien_1 = {"color": "yello", "points": 10}
+# alien_2 = {"color": "red", "points": 15}
+
+# aliens = [alien_0, alien_1, alien_2]
+
+# for alien in aliens:
+#     print(alien)
+
+# pizza = {"crust": "thick", "toppings": ["mushrooms", "extra cheese"]}
+
+# print(
+#     "You ordered a " + pizza["crust"] + "-crust pizza " + "with the following toppings:"
+# )
+
+# for topping in pizza["toppings"]:
+#     print("\t" + topping)
+
+# favorite_languages = {
+#     "jen": ["python", "ruby"],
+#     "sarah": ["c"],
+#     "edward": ["ruby", "go"],
+#     "phil": ["python", "haskell"],
+# }
+
+# for name, languages in favorite_languages.items():
+#     if len(languages) > 1:
+#         print("\n" + name.title() + "'s favorite languages are:")
+#         for language in languages:
+#             print("\t" + language.title())
+#     else:
+#         print("\n" + name.title() + " favorite languages is: ")
+#         print("\t" + language.title())
+
+# users = {
+#     "aienstein": {
+#         "first": "albert",
+#         "last": "einstein",
+#         "location": "princeton",
+#     },
+#     "mcurie": {
+#         "first": "marie",
+#         "last": "curie",
+#         "location": "paris",
+#     },
+# }
+
+# for username, user_info in users.items():
+#     print("\nUsername: " + username)
+#     full_name = user_info["first"] + " " + user_info["last"]
+#     location = user_info["location"]
+
+#     print("\tFull name: " + full_name.title())
+#     print("\tLocation: " + location.title())
+
+# PEOPLE EXample
+# Olumide_information = {
+#     "first_name": "olumide",
+#     "last_name": "Daramola",
+#     "age": 21,
+#     "city": "akure",
+# }
+
+# Ade_information = {
+#     "first_name": "ade",
+#     "last_name": "Dola",
+#     "age": 25,
+#     "city": "lagos",
+# }
+
+# Ola_information = {
+#     "first_name": "ola",
+#     "last_name": "Olu",
+#     "age": 26,
+#     "city": "abuja",
+# }
 
 
-for alien in aliens[:5]:
-    print(alien)
-print("...")
+# people = [Olumide_information, Ade_information, Ola_information]
+# for person in people:
+#     print("This is the everything i know about them: ")
+#     Full_name = person["first_name"] + " " + person["last_name"]
+#     location = person["city"]
+#     age = person["age"]
 
-print("Total number of aliens: " + str(len(aliens)))
+#     print(
+#         "\tTheir full_name is: "
+#         + Full_name.title()
+#         + ",city: "
+#         + location.title()
+#         + ", age: "
+#         + str(age)
+#     )
+
+# layke = {"type": "dog", "owner": "mr a"}
+
+# jack = {"type": "dog", "owner": "mr b"}
+
+# pets = [layke, jack]
+
+# for pet in pets:
+#     print(pet["type"], pet["owner"])
+
+favorite_places = {
+    "olumide": ["new york", "san_franciso"],
+    "ade": ["lisbon", "lagos"],
+    "ola": ["london", "aba"],
+}
+
+for name, favorite_place in favorite_places.items():
+    print(name + "'s favorite_places are: ")
+    for place in favorite_place:
+        print("\t " + place)
+# for place in favorite_place:
