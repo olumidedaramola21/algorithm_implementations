@@ -262,3 +262,29 @@
 #         print("Thanky you for responding " + friend + ".")
 
 # #############
+# print(range(5))
+# for value in range(5):
+#     print(value)
+
+aliens = []
+
+for alien_number in range(30):
+    new_Alien = {"color": "green", "points": 5, "speed": "slow"}
+    aliens.append(new_Alien)
+
+for alien in aliens[0:3]:
+    if alien["color"] == "green":
+        alien["color"] = "yellow"
+        alien["speed"] = "medium"
+        alien["points"] = 10
+    elif alien["color"] == "yellow":
+        alien["color"] = "red"
+        alien["speed"] = "fast"
+        alien["points"] = 15
+
+
+for alien in aliens[:5]:
+    print(alien)
+print("...")
+
+print("Total number of aliens: " + str(len(aliens)))
