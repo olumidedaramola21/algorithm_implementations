@@ -373,14 +373,60 @@
 # for pet in pets:
 #     print(pet["type"], pet["owner"])
 
-favorite_places = {
-    "olumide": ["new york", "san_franciso"],
-    "ade": ["lisbon", "lagos"],
-    "ola": ["london", "aba"],
-}
+# favorite_places = {
+#     "olumide": ["new york", "san_franciso"],
+#     "ade": ["lisbon", "lagos"],
+#     "ola": ["london", "aba"],
+# }
 
-for name, favorite_place in favorite_places.items():
-    print(name + "'s favorite_places are: ")
-    for place in favorite_place:
-        print("\t " + place)
-# for place in favorite_place:
+# for name, favorite_place in favorite_places.items():
+#     print(name + "'s favorite_places are: ")
+#     for place in favorite_place:
+#         print("\t " + place)
+# # for place in favorite_place:
+
+
+# FAVORITE NUMBER
+# favorite_number = {
+#     "olumide": [14, 13, 12, 11],
+#     "peter": [12, 14, 16, 18],
+#     "israel": [13, 16, 19, 22],
+#     "ade": [15, 17, 19, 21],
+#     "jpaul": [176, 177, 189, 98],
+# }
+
+# for name, numbers in favorite_number.items():
+#     print(name + " favorite_numbers are: ")
+#     for number in numbers:
+#         print([str(number)])
+
+# CITIES. print the name of each city and all of the information stored in them.
+# cities = {
+#     "lagos": {
+#         "country": "Nigeria",
+#         "population": 140000,
+#         "Key_fact": "Nigeria is the most populous country in Africa",
+#     },
+#     "lisbon": {
+#         "country": "Portugal",
+#         "population": 10000,
+#         "Key_fact": "Lisbon is the second smallest city in europe.",
+#     },
+#     "Berlin": {
+#         "country": "Germany",
+#         "population": 8000,
+#         "Key_fact": "Berlin is the oil capital of the world0",
+#     },
+# }
+
+# for city, city_info in cities.items():
+#     print("Today we are considering: " + city)
+#     for k, info in city_info.items():
+#         print("\t" + k + ": " + str(info))
+
+# Extension
+
+# INPUT
+
+message = input("Tell me something, and I will repeat it back to you: ")
+print(message)
