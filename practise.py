@@ -487,27 +487,77 @@
 #         print(message + " will be added to pizza.")
 
 # MOVIE TICKETS
-prompt = "\nPlease, enter your age (or 'quit' to end program):"
+# prompt = "\nPlease, enter your age (or 'quit' to end program):"
 
-message = ""
+# message = ""
 
-active = True
+# active = True
 
-while active:
-    message = input(prompt)
+# while active:
+#     message = input(prompt)
 
-    if message.isdigit():
-        age = int(message)
+#     if message.isdigit():
+#         age = int(message)
 
-        if age < 3:
-            print("The cost of your movie ticket is Free")
-        elif 3 <= age <= 12:
-            print("The cost of your movie ticket is $" + str(10))
-        else:
-            print("The cost of your movie ticket is $" + str(15))
+#         if age < 3:
+#             print("The cost of your movie ticket is Free")
+#         elif 3 <= age <= 12:
+#             print("The cost of your movie ticket is $" + str(10))
+#         else:
+#             print("The cost of your movie ticket is $" + str(15))
 
-    elif message == "quit":
-        print("Goodbye")
-        break
-    else:
-        print("Invalid input. Please enter a valid age or 'quit'")
+#     elif message == "quit":
+#         print("Goodbye")
+#         break
+#     else:
+#         print("Invalid input. Please enter a valid age or 'quit'")
+
+# Start with users that need  to be verified
+# and an empty list to hold confirmed users.
+
+# unconfirmed_users = ["alice", "brian", "candace"]
+# confirmed_users = []
+
+# # Verify each user until there are no more uncofirmed users.
+# # Move each verified user into the list of confirmed users.
+
+# while unconfirmed_users:
+#     current_user = unconfirmed_users.pop()
+
+#     print("Verifying user: " + current_user.title())
+#     confirmed_users.append(current_user)
+
+#     # Display all confirmed users.
+#     print("\nThe following users have been confirmed:")
+#     for confirmed_user in confirmed_users:
+#         print(confirmed_user.title())
+
+# pets = ["dog", "cat", "dog", "goldfish", "cat", "rabbit", "cat"]
+# print(pets)
+
+# while "cat" in pets:
+#     pets.remove("cat")
+
+#     print(pets)
+
+# POLLING PROGRAM
+reponses = {}
+# set a flag to indicate that polling is active
+polling_active = True
+
+while polling_active:
+    # Prompt for the person's name and response.
+    name = input("\nWhat is your name?")
+    reponse = input("Which mountain would you like to climb ")
+
+    # store the response in the dictionary
+    reponses[name] = reponse
+    # Find out if any one else is taking poll
+    repeat = input("Would you like to let another person respond?(Yes/No)")
+    if repeat == "No":
+        polling_active = False
+
+# Polling is complete. Show the results.
+print("\n--- Poll Results---")
+for name, response in reponses.items():
+    print(name + " would like to climb " + response + ".")
