@@ -436,3 +436,78 @@
 # while current_number <= 5:
 #     print(current_number)
 #     current_number += 1
+
+# prompt = "\nTell me something, and i will repeat it back to you:"
+# prompt += "\nEnter 'quit' to end the program. "
+
+# message = ""
+# active = True
+
+# while active:
+#     message = input(prompt)
+
+#     if message == "quit":
+#         active = False
+#     else:
+#         print(message)
+
+# prompt = "\nPlease enter the name of a city you have visited:"
+# prompt += "\n(Enter 'quit' when you are finished.)"
+
+# while True:
+#     city = input(prompt)
+
+#     if city == "quit":
+#         break
+#     else:
+#         print("I'd love  to go to " + city.title() + "!")
+
+# USING CONTINUE
+# current_number = 0
+# while current_number < 10:
+#     current_number += 1
+
+#     if current_number % 2 == 0:
+#         continue
+
+#     print(current_number)
+
+# PIZZA TOPPINGS
+# prompt = "\nPlease, Enter your favorite topping:"
+# prompt += "\nenter 'quit' to  exit."
+
+# active = True
+
+# while active:
+#     message = input(prompt)
+
+#     if message == "quit":
+#         break
+#     else:
+#         print(message + " will be added to pizza.")
+
+# MOVIE TICKETS
+prompt = "\nPlease, enter your age (or 'quit' to end program):"
+
+message = ""
+
+active = True
+
+while active:
+    message = input(prompt)
+
+    if message.isdigit():
+        age = int(message)
+
+        if age < 3:
+            print("The cost of your movie ticket is Free")
+        elif 3 <= age <= 12:
+            print("The cost of your movie ticket is $" + str(10))
+        else:
+            print("The cost of your movie ticket is $" + str(15))
+
+    elif message == "quit":
+        print("Goodbye")
+        break
+    else:
+        print("Invalid input. Please enter a valid age or 'quit'")
