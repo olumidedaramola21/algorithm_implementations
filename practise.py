@@ -541,23 +541,110 @@
 #     print(pets)
 
 # POLLING PROGRAM
-reponses = {}
-# set a flag to indicate that polling is active
-polling_active = True
+# reponses = {}
+# # set a flag to indicate that polling is active
+# polling_active = True
 
-while polling_active:
-    # Prompt for the person's name and response.
-    name = input("\nWhat is your name?")
-    reponse = input("Which mountain would you like to climb ")
+# while polling_active:
+#     # Prompt for the person's name and response.
+#     name = input("\nWhat is your name?")
+#     reponse = input("Which mountain would you like to climb ")
 
-    # store the response in the dictionary
-    reponses[name] = reponse
-    # Find out if any one else is taking poll
-    repeat = input("Would you like to let another person respond?(Yes/No)")
-    if repeat == "No":
-        polling_active = False
+#     # store the response in the dictionary
+#     reponses[name] = reponse
+#     # Find out if any one else is taking poll
+#     repeat = input("Would you like to let another person respond?(Yes/No)")
+#     if repeat == "No":
+#         polling_active = False
 
-# Polling is complete. Show the results.
-print("\n--- Poll Results---")
-for name, response in reponses.items():
-    print(name + " would like to climb " + response + ".")
+# # Polling is complete. Show the results.
+# print("\n--- Poll Results---")
+# for name, response in reponses.items():
+#     print(name + " would like to climb " + response + ".")
+
+# sandwich_orders = [
+#     "pastrami",
+#     "sandwich_a",
+#     "pastrami",
+#     "sandwish_b",
+#     "pastrami",
+#     "sandwish_c",
+#     "pastrami",
+#     "pastrami",
+# ]
+# finished_sandwiches = []
+
+# while sandwich_orders:
+#     print("deli has run out of pastrami")
+
+#     while "pastrami" in sandwich_orders:
+#         sandwich_orders.remove("pastrami")
+
+#     sandwich = sandwich_orders.pop()
+#     print("I made your " + sandwich)
+
+#     finished_sandwiches.append(sandwich)
+
+# for sandwich in finished_sandwiches:
+#     print(sandwich + " has been made.")
+
+
+# # POLLING PROGRAM 1 AND POLLING PROGAM 2
+# # reponses = {}
+# reponses = {}
+# # # set a flag to indicate that polling is active
+# # polling_active = True
+# polling_active = True
+
+# # while polling_active:
+# while polling_active:
+#     #     # Prompt for the person's name and response.
+#     #     name = input("\nWhat is your name?")
+#     name = input("\nWhat is your name?")
+#     #     reponse = input("Which mountain would you like to climb ")
+#     question = input("\nIf you could visit one place in the world, where would you go?")
+
+#     #     # store the response in the dictionary
+#     #     reponses[name] = reponse
+#     reponses[name] = question
+#     # Find out if any one else is taking poll
+#     repeat = input("Would you like to let another person respond?(Yes/No)")
+#     if repeat == "No":
+#         polling_active = False
+
+# # Polling is complete. Show the results.
+# print("\n--- Poll Results---")
+# for name, question in reponses.items():
+#     print(name + " would love to visit " + question + ".")
+
+
+# FUNCTIONS
+# def greet_user(username):
+#     """Display a simple greeting"""
+#     print("Hello, " + username + "!")
+
+
+# greet_user("Jesse")
+
+
+# def display_message():
+#     print("I Love Jesus!")
+
+
+# display_message()
+
+
+# def favorite_book(title):
+#     print("One of my favorite books is " + title + ".")
+
+
+# favorite_book("Alice in wonderland")
+
+
+def describe_pet(animal_type, pet_name):
+    print("\nI have a " + animal_type + ".")
+    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+
+
+describe_pet("Hamster", "harry")
+describe_pet("dog", "willie")
