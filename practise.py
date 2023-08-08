@@ -641,10 +641,52 @@
 # favorite_book("Alice in wonderland")
 
 
-def describe_pet(animal_type, pet_name):
-    print("\nI have a " + animal_type + ".")
-    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+# def describe_pet(animal_type, pet_name):
+#     print("\nI have a " + animal_type + ".")
+#     print("My " + animal_type + "'s name is " + pet_name.title() + ".")
 
 
-describe_pet("Hamster", "harry")
-describe_pet("dog", "willie")
+# describe_pet("Hamster", "harry")
+# describe_pet("dog", "willie")
+
+
+# def make_shirt(size="large", message="I love python"):
+#     print("My shirt is a size " + size)
+#     print("I want this message printed on it: " + message)
+
+
+# make_shirt("medium", "I want to become a software developer.")
+# make_shirt()
+# make_shirt("small")
+
+
+#
+
+
+# def build_person(first_name, last_name, age=""):
+#     person = {"first": first_name, "last": last_name}
+#     if age:
+#         person["age"] = age
+#     return person
+
+#     return person
+
+
+# musician = build_person("jimi", "hendrix", age=27)
+# print(musician)
+
+
+# def get_formatted_name(first_name, last_name):
+#     full_name = first_name + " " + last_name
+#     return full_name
+
+
+# is_active = True
+
+# while is_active:
+#     print("\nPlease tell me your name: ")
+#     f_name = input("first_name: ")
+#     l_name = input("last_name: ")
+
+#     formated_name = get_formatted_name(f_name, l_name)
+#     print("\nHello, " + formated_name + "!")
