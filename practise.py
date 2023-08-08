@@ -685,8 +685,90 @@
 
 # while is_active:
 #     print("\nPlease tell me your name: ")
+#     print("(enter 'q' at any time to quit)")
 #     f_name = input("first_name: ")
+#     if f_name == "q":
+#         break
 #     l_name = input("last_name: ")
+#     if l_name == "q":
+#         break
 
 #     formated_name = get_formatted_name(f_name, l_name)
 #     print("\nHello, " + formated_name + "!")
+
+
+# def city_country(city_name, country_name):
+#     formatted_city_country = city_name + ", " + country_name
+#     return formatted_city_country
+
+
+# a = city_country("Santiago", "Chile")
+# b = city_country("Lisbon", "Portugal")
+# c = city_country("Lagos", "Nigeria")
+# print(a, b, c)
+
+
+# def make_album(arstist_name, album_title, number_of_tracks=""):
+#     if number_of_tracks:
+#         album = {
+#             "Arstist_name": arstist_name,
+#             "album_title": album_title,
+#             "number of tracks": number_of_tracks,
+#         }
+#     else:
+#         album = {"Arstist_name": arstist_name, "album_title": album_title}
+#     return album
+
+
+# while True:
+#     print("\nPlease give arstist_name, album_title: ")
+#     print("(enter 'q' at any time to quit)")
+#     a_name = input("arstist_name: ")
+#     if a_name == "q":
+#         break
+#     a_title = input("album_title: ")
+#     if a_title == "q":
+#         break
+
+#     arstist = make_album(a_name, a_title)
+#     print(arstist)
+
+#     formated_name = get_formatted_name(f_name, l_name)
+#     print("\nHello, " + formated_name + "!")
+
+# olamide = make_album("Olamide", "unruly", 14)
+# wizkid = make_album("Wizkid", "essense")
+# burnaboy = make_album("burnaboy", "dangote")
+
+# print(olamide)
+# print(burnaboy)
+# print(wizkid)
+
+
+# def greet_users(names):
+#     for name in names:
+#         msg = "Hello, " + name.title() + "!"
+#         print(msg)
+
+
+# usernames = ["hannah", "ty", "margot"]
+# greet_users(usernames)
+
+magicians_names = ["olu", "ade", "bayo", "eazi"]
+
+
+def show_magicians(names):
+    for name in names:
+        print(name)
+
+
+def make_great(names):
+    new_list = []
+    for name in names:
+        new_list.append("Great " + name)
+    return new_list
+
+
+modified_names = make_great(magicians_names[:])
+show_magicians(magicians_names)
+show_magicians(modified_names)
