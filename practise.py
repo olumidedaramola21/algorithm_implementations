@@ -746,29 +746,50 @@
 
 
 # def greet_users(names):
-#     for name in names:
-#         msg = "Hello, " + name.title() + "!"
+#     for name in names:         msg = "Hello, " + name.title() + "!"
 #         print(msg)
 
 
 # usernames = ["hannah", "ty", "margot"]
 # greet_users(usernames)
 
-magicians_names = ["olu", "ade", "bayo", "eazi"]
+# magicians_names = ["olu", "ade", "bayo", "eazi"]
 
 
-def show_magicians(names):
-    for name in names:
-        print(name)
+# def show_magicians(names):
+#     for name in names:
+#         print(name)
 
 
-def make_great(names):
-    new_list = []
-    for name in names:
-        new_list.append("Great " + name)
-    return new_list
+# def make_great(names):
+#     new_list = []
+#     for name in names:
+#         new_list.append("Great " + name)
+#     return new_list
 
 
-modified_names = make_great(magicians_names[:])
-show_magicians(magicians_names)
-show_magicians(modified_names)
+# modified_names = make_great(magicians_names[:])
+# show_magicians(magicians_names)
+# show_magicians(modified_names)
+
+
+# def make_pizza(*toppings):
+#     """Summarize the pizza we are about to make."""
+#     print("\nMaking a pizza with the following toppings:")
+#     for topping in toppings:
+#         print("-" + topping)
+
+
+# make_pizza("pepperoni")
+# make_pizza("mushrooms", "green peppers", "extra cheese")
+
+
+def make_pizza(size, *toppings):
+    """Summarize the pizza we are about to make"""
+    print("Making a " + str(size) + "-inch pizza with the following toppings:")
+    for topping in toppings:
+        print("-" + topping)
+
+
+make_pizza(16, "pepperoni")
+make_pizza(12, "mushrooms", "green peppers", "extra cheese")
