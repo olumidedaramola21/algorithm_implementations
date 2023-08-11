@@ -20,4 +20,4 @@ my_list = [1, 3, 5, 7, 9]
 
 print(binary_search(my_list, 3))
 
-a = []
+a = [1, 2, 3, 4, 5]
