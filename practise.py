@@ -798,21 +798,92 @@
 # Class
 
 
-class Dog:
-    """A simple attempt to model a dog."""
+# class Dog():
+#     """A simple attempt to model a dog."""
 
-    def __init__(self, name, age):
-        """Initialize name and age attributes."""
-        self.name = name
+#     def __init__(self, name, age):
+#         """Initialize name and age attributes."""
+#         self.name = name
+#         self.age = age
+
+#     def sit(self):
+#         """Simulate a dog sitting in response to a command."""
+#         print(self.name.title() + " is now sitting.")
+
+#     def roll_over(self):
+#         """Simulate a dog rolling over in response to a command."""
+#         print(self.name.title() + " rolled over!")
+
+
+# my_dog = Dog("willie", 6)
+# my_dog.sit()
+# my_dog.roll_over()
+
+# print("My dog's name is " + my_dog.name.title() + ".")
+# print("My dog's age is " + str(my_dog.age) + ".")
+
+
+# Class example one: Restaurant
+# class Restaurant():
+#     def __init__(self, restaurant_name, cuisine_type):
+#         self.restaurant_name = restaurant_name
+#         self.cuisine_type = cuisine_type
+
+#     def describe_restaurant(self):
+#         print(self.restaurant_name.title() + " is the best restaurant in Nigeria")
+#         print(
+#             self.restaurant_name.title()
+#             + " serves this type of cuisine "
+#             + self.cuisine_type
+#         )
+
+#     def open_restaurant(self):
+#         print("We are open")
+
+
+# restaurant1 = Restaurant("aba", "hot_meal")
+# restaurant2 = Restaurant("aba", "hot_meal")
+# restaurant3 = Restaurant("aba", "hot_meal")
+
+# restaurant1.open_restaurant()
+# restaurant1.describe_restaurant()
+# restaurant2.open_restaurant()
+# restaurant2.describe_restaurant()
+# restaurant3.open_restaurant()
+# restaurant3.describe_restaurant()
+
+# USers
+
+
+class Users:
+    def __init__(self, first_name, last_name, age, nationality):
+        self.first_name = first_name
+        self.last_name = last_name
         self.age = age
+        self.nationality = nationality
 
-    def sit(self):
-        """Simulate a dog sitting in response to a command."""
-        print(self.name.title() + " is now sitting.")
+    def describe_user(self):
+        print(
+            "My name is "
+            + self.first_name
+            + " "
+            + self.last_name
+            + ", I'm "
+            + str(self.age)
+            + " and i'm a citizen of "
+            + self.nationality
+        )
 
-    def roll_over(self):
-        """Simulate a dog rolling over in response to a command."""
-        print(self.name.title() + " rolled over!")
+    def greet_user(self):
+        print("Hello " + self.first_name + "!")
 
 
-my_dog = Dog("willie", 6)
+first_user = Users("Olumide", "Daramola", 21, "Nigerian")
+first_user.describe_user()
+first_user.greet_user()
+second_user = Users("Omobolaji", "Daramola", 23, "Nigerian")
+second_user.describe_user()
+second_user.greet_user()
+third_user = Users("Israel", "Adenigba", 19, "Nigerian")
+third_user.describe_user()
+third_user.greet_user()
