@@ -855,35 +855,88 @@
 # USers
 
 
-class Users:
-    def __init__(self, first_name, last_name, age, nationality):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
-        self.nationality = nationality
+# class Users:
+#     def __init__(self, first_name, last_name, age, nationality):
+#         self.first_name = first_name
+#         self.last_name = last_name
+#         self.age = age
+#         self.nationality = nationality
 
-    def describe_user(self):
-        print(
-            "My name is "
-            + self.first_name
-            + " "
-            + self.last_name
-            + ", I'm "
-            + str(self.age)
-            + " and i'm a citizen of "
-            + self.nationality
-        )
+#     def describe_user(self):
+#         print(
+#             "My name is "
+#             + self.first_name
+#             + " "
+#             + self.last_name
+#             + ", I'm "
+#             + str(self.age)
+#             + " and i'm a citizen of "
+#             + self.nationality
+#         )
 
-    def greet_user(self):
-        print("Hello " + self.first_name + "!")
+#     def greet_user(self):
+#         print("Hello " + self.first_name + "!")
 
 
-first_user = Users("Olumide", "Daramola", 21, "Nigerian")
-first_user.describe_user()
-first_user.greet_user()
-second_user = Users("Omobolaji", "Daramola", 23, "Nigerian")
-second_user.describe_user()
-second_user.greet_user()
-third_user = Users("Israel", "Adenigba", 19, "Nigerian")
-third_user.describe_user()
-third_user.greet_user()
+# first_user = Users("Olumide", "Daramola", 21, "Nigerian")
+# first_user.describe_user()
+# first_user.greet_user()
+# second_user = Users("Omobolaji", "Daramola", 23, "Nigerian")
+# second_user.describe_user()
+# second_user.greet_user()
+# third_user = Users("Israel", "Adenigba", 19, "Nigerian")
+# third_user.describe_user()
+# third_user.greet_user()
+
+# Testing The NONE Return
+# def foo1(value):
+#     if value:
+#         return value
+#     else:
+#         return None
+
+
+# def foo2(value):
+#     if value:
+#         return value
+#     else:
+#         return
+
+
+# def foo3(value):
+#     if value:
+#         return value
+
+
+# print(foo1(0))
+# print(foo2(0))
+# print(foo3(0))
+
+
+class Car:
+    # A simple attempt to represent a car
+    def __init__(self, make, model, year):
+        # Initialize attributes to describe a car
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+
+    def get_descriptive_name(self):
+        # Return a neatly formatted descriptive name
+        long_name = str(self.year) + " " + self.make + " " + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        # print a statement showing car mileage
+        print("This car has " + str(self.odometer_reading) + " miles on it")
+
+    def update_odometer(self, mileage):
+        # set the odometer reading to the given value
+        self.odometer_reading = mileage
+
+
+my_new_car = Car("audi", "a4", 2016)
+print(my_new_car.get_descriptive_name())
+my_new_car.update_odometer(23)
+my_new_car.read_odometer()
