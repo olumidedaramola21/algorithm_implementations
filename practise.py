@@ -1260,7 +1260,9 @@ class Battery:
         if self.battery_size != 85:
             self.battery_size = 85
 
+
 my_telsa = ElectricCar("tesla", "model s", 2016)
 my_telsa.battery.describe_battery()
 my_telsa.battery.get_range()
-
+my_telsa.battery.upgrade_battery()
+my_telsa.battery.get_range()
