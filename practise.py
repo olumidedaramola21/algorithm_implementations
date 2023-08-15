@@ -1003,6 +1003,186 @@
 # restaurant1.describe_restaurant()
 
 
+# class Car:
+#     # A simple attempt to represent a car
+#     def __init__(self, make, model, year):
+#         # Initialize attributes to describe a car
+#         self.make = make
+#         self.model = model
+#         self.year = year
+#         self.odometer_reading = 0
+
+#     def get_descriptive_name(self):
+#         # Return a neatly formatted descriptive name
+#         long_name = str(self.year) + " " + self.make + " " + self.model
+#         return long_name.title()
+
+#     def read_odometer(self):
+#         # print a statement showing car mileage
+#         print("This car has " + str(self.odometer_reading) + " miles on it")
+
+#     def update_odometer(self, mileage):
+#         # set the odometer reading to the given value
+#         if mileage > self.odometer_reading:
+#             self.odometer_reading = mileage
+#         else:
+#             print("You can't roll back on odometer")
+
+#     def increment_odometer(self, miles):
+#         # Add the given amount to the odometer reading
+#         if miles > 0:
+#             self.odometer_reading += miles
+
+#     def fill_gas_tank(self):
+#         # print that all cars need to fill gas tank
+#         print("Fill your gas tank")
+
+
+# class ElectricCar(Car):
+#     # Represent aspects of car, specific to electric vehicles
+
+#     def __init__(self, make, model, year):
+#         # Initialize attributes of the parent class.
+#         # Then initialize attributes specific to an electric car
+#         super().__init__(make, model, year)
+#         self.battery_size = 70
+#         self.battery = Battery()
+
+#     def fill_gas_tank(self):
+#         # Override the parent class
+#         print("Electric cars do not need fuel")
+
+
+# class Battery:
+#     # A simple attempt to model a battery for an electric car
+
+#     def __init__(self, battery_size=70):
+#         # Initialize the battery's attributes
+#         self.battery_size = battery_size
+
+#     def describe_battery(self):
+#         # Print a statement describing the battery size.
+#         print("This car has a " + str(self.battery_size) + "-KWh battery.")
+
+#     def get_range(self):
+#         # Print a statement about the range this battery provides.
+#         if self.battery_size == 70:
+#             range = 240
+#         else:
+#             range = 270
+
+#         message = "This car can go approximately " + str(range)
+#         message += " miles on a full charge."
+#         print(message)
+
+
+# my_telsa = ElectricCar("tesla", "model s", 2016)
+# # print(my_telsa.get_descriptive_name())
+# my_telsa.battery.describe_battery()
+# my_telsa.battery.get_range()
+# # print(str(my_telsa.battery_size))
+
+
+# ICE CREAM STAND
+
+# class Restaurant:
+#     def __init__(self, restaurant_name, cuisine_type):
+#         self.restaurant_name = restaurant_name
+#         self.cuisine_type = cuisine_type
+#         self.number_served = 0
+
+#     def describe_restaurant(self):
+#         print(self.restaurant_name.title() + " is the best restaurant in Nigeria")
+#         print(
+#             self.restaurant_name.title()
+#             + " serves this type of cuisine "
+#             + self.cuisine_type
+#             + " and this is the number of people already served at the party: "
+#             + str(self.number_served)
+#         )
+
+#     def set_number_served(self, number):
+#         self.number_served = number
+
+#     def increment_number_served(self, number):
+#         self.number_served += number
+
+
+# class IceCreamStand(Restaurant):
+#     # This class will extend the restaurant class
+
+#     def __init__(self, restaurant_name, cuisine_type):
+#         super().__init__(restaurant_name, cuisine_type)
+#         self.flavors = ["vanilla", "chocolate", "strawberry", "apple"]
+
+#     def display_flavors(self):
+#         # This prints out the flavors
+#         print(self.flavors[0])
+
+
+# my_icream_stand = IceCreamStand("abe's ice_cream", "icecream")
+# my_icream_stand.display_flavors()
+
+
+# ADMIN
+
+# class Users:
+#     def __init__(self, first_name, last_name, age, nationality):
+#         self.first_name = first_name
+#         self.last_name = last_name
+#         self.age = age
+#         self.nationality = nationality
+#         self.login_attempts = 0
+
+#     def describe_user(self):
+#         print(
+#             "My name is "
+#             + self.first_name
+#             + " "
+#             + self.last_name
+#             + ", I'm "
+#             + str(self.age)
+#             + " and i'm a citizen of "
+#             + self.nationality
+#         )
+
+#     def greet_user(self):
+#         print("Hello " + self.first_name + "!")
+
+#     def increment_login_attempts(self):
+#         self.login_attempts += 1
+
+#     def reset_login_attempts(self):
+#         self.login_attempts = 0
+
+#     def print_login_attempts(self):
+#         print(self.login_attempts)
+
+
+# class Admin(Users):
+#     # This class extends the class of Users
+#     def __init__(self, first_name, last_name, age, nationality):
+#         super().__init__(first_name, last_name, age, nationality)
+#         self.privileges = ["can add post", "can delete post", "can ban users"]
+
+#     def show_privileges(self):
+#         # This function list the admin privileges
+#         print(
+#             "This are the admin's privileges: "
+#             + "\n"
+#             + self.privileges[0]
+#             + "\n"
+#             + self.privileges[1]
+#             + "\n"
+#             + self.privileges[2]
+#         )
+
+
+# olumide = Admin("Olumide", "Daramola", 21, "Nigeria")
+# olumide.show_privileges()
+
+
+# BATTERY UPGRADE
 class Car:
     # A simple attempt to represent a car
     def __init__(self, make, model, year):
@@ -1075,9 +1255,12 @@ class Battery:
         message += " miles on a full charge."
         print(message)
 
+    def upgrade_battery(self):
+        # Checks the battery size
+        if self.battery_size != 85:
+            self.battery_size = 85
 
 my_telsa = ElectricCar("tesla", "model s", 2016)
-# print(my_telsa.get_descriptive_name())
 my_telsa.battery.describe_battery()
 my_telsa.battery.get_range()
-# print(str(my_telsa.battery_size))
+
