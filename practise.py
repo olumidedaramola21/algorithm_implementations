@@ -1183,86 +1183,112 @@
 
 
 # BATTERY UPGRADE
-class Car:
-    # A simple attempt to represent a car
-    def __init__(self, make, model, year):
-        # Initialize attributes to describe a car
-        self.make = make
-        self.model = model
-        self.year = year
-        self.odometer_reading = 0
+# class Car:
+#     # A simple attempt to represent a car
+#     def __init__(self, make, model, year):
+#         # Initialize attributes to describe a car
+#         self.make = make
+#         self.model = model
+#         self.year = year
+#         self.odometer_reading = 0
 
-    def get_descriptive_name(self):
-        # Return a neatly formatted descriptive name
-        long_name = str(self.year) + " " + self.make + " " + self.model
-        return long_name.title()
+#     def get_descriptive_name(self):
+#         # Return a neatly formatted descriptive name
+#         long_name = str(self.year) + " " + self.make + " " + self.model
+#         return long_name.title()
 
-    def read_odometer(self):
-        # print a statement showing car mileage
-        print("This car has " + str(self.odometer_reading) + " miles on it")
+#     def read_odometer(self):
+#         # print a statement showing car mileage
+#         print("This car has " + str(self.odometer_reading) + " miles on it")
 
-    def update_odometer(self, mileage):
-        # set the odometer reading to the given value
-        if mileage > self.odometer_reading:
-            self.odometer_reading = mileage
-        else:
-            print("You can't roll back on odometer")
+#     def update_odometer(self, mileage):
+#         # set the odometer reading to the given value
+#         if mileage > self.odometer_reading:
+#             self.odometer_reading = mileage
+#         else:
+#             print("You can't roll back on odometer")
 
-    def increment_odometer(self, miles):
-        # Add the given amount to the odometer reading
-        if miles > 0:
-            self.odometer_reading += miles
+#     def increment_odometer(self, miles):
+#         # Add the given amount to the odometer reading
+#         if miles > 0:
+#             self.odometer_reading += miles
 
-    def fill_gas_tank(self):
-        # print that all cars need to fill gas tank
-        print("Fill your gas tank")
-
-
-class ElectricCar(Car):
-    # Represent aspects of car, specific to electric vehicles
-
-    def __init__(self, make, model, year):
-        # Initialize attributes of the parent class.
-        # Then initialize attributes specific to an electric car
-        super().__init__(make, model, year)
-        self.battery_size = 70
-        self.battery = Battery()
-
-    def fill_gas_tank(self):
-        # Override the parent class
-        print("Electric cars do not need fuel")
+#     def fill_gas_tank(self):
+#         # print that all cars need to fill gas tank
+#         print("Fill your gas tank")
 
 
-class Battery:
-    # A simple attempt to model a battery for an electric car
+# class ElectricCar(Car):
+#     # Represent aspects of car, specific to electric vehicles
 
-    def __init__(self, battery_size=70):
-        # Initialize the battery's attributes
-        self.battery_size = battery_size
+#     def __init__(self, make, model, year):
+#         # Initialize attributes of the parent class.
+#         # Then initialize attributes specific to an electric car
+#         super().__init__(make, model, year)
+#         self.battery_size = 70
+#         self.battery = Battery()
 
-    def describe_battery(self):
-        # Print a statement describing the battery size.
-        print("This car has a " + str(self.battery_size) + "-KWh battery.")
-
-    def get_range(self):
-        # Print a statement about the range this battery provides.
-        if self.battery_size == 70:
-            range = 240
-        else:
-            range = 270
-
-        message = "This car can go approximately " + str(range)
-        message += " miles on a full charge."
-        print(message)
-
-    def upgrade_battery(self):
-        # Checks the battery size
-        if self.battery_size != 85:
-            self.battery_size = 85
+#     def fill_gas_tank(self):
+#         # Override the parent class
+#         print("Electric cars do not need fuel")
 
 
-my_telsa = ElectricCar("tesla", "model s", 2016)
-my_telsa.battery.describe_battery()
-my_telsa.battery.get_range()
-my_telsa.battery.upgrade_battery()
+# class Battery:
+#     # A simple attempt to model a battery for an electric car
+
+#     def __init__(self, battery_size=70):
+#         # Initialize the battery's attributes
+#         self.battery_size = battery_size
+
+#     def describe_battery(self):
+#         # Print a statement describing the battery size.
+#         print("This car has a " + str(self.battery_size) + "-KWh battery.")
+
+#     def get_range(self):
+#         # Print a statement about the range this battery provides.
+#         if self.battery_size == 70:
+#             range = 240
+#         else:
+#             range = 270
+
+#         message = "This car can go approximately " + str(range)
+#         message += " miles on a full charge."
+#         print(message)
+
+#     def upgrade_battery(self):
+#         # Checks the battery size
+#         if self.battery_size != 85:
+#             self.battery_size = 85
+
+
+# my_telsa = ElectricCar("tesla", "model s", 2016)
+# my_telsa.battery.describe_battery()
 # my_telsa.battery.get_range()
+# my_telsa.battery.upgrade_battery()
+# # my_telsa.battery.get_range()
+
+
+# ERROR HANDLING
+# print(5 / 0) --> ZeroDivisionError
+# try:
+#     print(5 / 0)
+# except ZeroDivisionError:
+#     print("Division by zero is not allowed")
+
+# division.py
+print("Give me two numbers, and I'll divide them.")
+print("Enter 'q' to quit")
+
+while True:
+    first_number = input("\nFirst number: ")
+    if first_number == "q":
+        break
+    second_number = input("Second number: ")
+    if second_number == "q":
+        break
+    try:
+        answer = int(first_number) / int(second_number)
+    except ZeroDivisionError:
+        print("You can't divide by 0")
+    else:
+        print(answer)
