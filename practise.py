@@ -1284,7 +1284,7 @@ while True:
     if first_number == "q":
         break
     second_number = input("Second number: ")
-    if second_number == "q":
+    if second_number == "qe":
         break
     try:
         answer = int(first_number) / int(second_number)
