@@ -1,0 +1,25 @@
+"""
+stack = []
+print(len(stack) == 0)
+print(not stack)
+print(stack)"""
+
+# A Basic program utilizing stack
+stack = []
+
+
+def push():
+    """Push input into stack"""
+    element = input("Enter the element")
+    stack.append(element)
+    print(stack)
+
+
+def pop():
+    """Pop element from stack."""
+    if not stack:
+        print("Stack is empty")
+    else:
+        e = stack.pop()
+        print("removed elment: " + e)
+        print(stack)
