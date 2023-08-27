@@ -10,15 +10,18 @@ print(len(stack) == 0)
 print(not stack)
 print(stack)"""
 
-# A Basic program utilizing stack using list
+# A Basic stack implementation using list
 stack = []
 
 
 def push():
     """Push input into stack"""
-    element = input("Enter the element")
-    stack.append(element)
-    print(stack)
+    if len(stack) == n:
+        print("list is already full")
+    else:
+        element = input("Enter the element")
+        stack.append(element)
+        print(stack)
 
 
 def pop():
@@ -32,3 +35,18 @@ def pop():
 
 
 # A slightly more complicated stack implementation using list
+
+# Add limit to stack
+n = int(input("limit of stack: "))
+
+while True:
+    print("Select the operation 1.push  2.pop 3.quit")
+    choice = int(input())
+    if choice == 1:
+        push()
+    elif choice == 2:
+        pop()
+    elif choice == 3:
+        break
+    else:
+        print("enter the correct opreation !")
