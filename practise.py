@@ -1292,3 +1292,6 @@
 #         print("You can't divide by 0")
 #     else:
 #         print(answer)
+
+char_count = [0] * 26
+print(char_count)
