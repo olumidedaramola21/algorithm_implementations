@@ -9,10 +9,10 @@
 
 
 # Implementation of a phone book
-phone_book = {}
-phone_book["mary"] = 912345678
-phone_book["bisi"] = 1900345578
-print(phone_book["bisi"])
+# phone_book = {}
+# phone_book["mary"] = 912345678
+# phone_book["bisi"] = 1900345578
+# print(phone_book["bisi"])
 
 # DNS Resolution
 # DNS Resolution reflects use case of hash tables
@@ -41,18 +41,18 @@ print(phone_book["bisi"])
 # check_voter("Olu")
 
 
-# Facebook Cache system
-def get_data_from_server():
-    pass
+# # Facebook Cache system
+# def get_data_from_server():
+#     pass
 
 
-cache = {}
+# cache = {}
 
 
-def get_page(url):
-    if cache.get(url):
-        return cache[url]
-    else:
-        data = get_data_from_server(url)
-        cache[url] = data
-        return data
+# def get_page(url):
+#     if cache.get(url):
+#         return cache[url]
+#     else:
+#         data = get_data_from_server(url)
+#         cache[url] = data
+#         return data
