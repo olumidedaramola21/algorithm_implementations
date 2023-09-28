@@ -1295,3 +1295,31 @@
 
 char_count = [0] * 26
 print(char_count)
+
+
+def twoSum(nums, target):
+    # Create a dictionary to store the mapping of numbers to their indices
+    num_dict = {}
+
+    # Iterate through the array
+    for i, num in enumerate(nums):
+        # Calculate the complement needed to reach the target
+        complement = target - num
+
+        # Check if the complement is already in the dictionary
+        if complement in num_dict:
+            # Return the indices of the two numbers
+            return [num_dict[complement], i]
+
+        # If the complement is not in the dictionary, add the current number and its index
+        num_dict[num] = i
+
+    # If no solution is found, return an empty list or handle it as per your requirements
+    return []
+
+
+# Example usage:
+nums = [2, 7, 11, 15]
+target = 9
+result = twoSum(nums, target)
+print(result)  # Output will be [0, 1] because nums[0] + nums[1] = 2 + 7 = 9

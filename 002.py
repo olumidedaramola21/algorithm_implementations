@@ -24,18 +24,35 @@ print(phone_book["bisi"])
 # value = voted.get("tom", 0)
 
 
-# Voting System
-voted = {}
+# # Voting System
+# voted = {}
 
 
-def check_voter(name):
-    if voted.get(name):
-        print("Get out!")
+# def check_voter(name):
+#     if voted.get(name):
+#         print("Get out!")
+#     else:
+#         voted[name] = True
+#         print("Let them vote.")
+
+
+# check_voter("tom")
+# check_voter("tom")
+# check_voter("Olu")
+
+
+# Facebook Cache system
+def get_data_from_server():
+    pass
+
+
+cache = {}
+
+
+def get_page(url):
+    if cache.get(url):
+        return cache[url]
     else:
-        voted[name] = True
-        print("Let them vote.")
-
-
-check_voter("tom")
-check_voter("tom")
-check_voter("Olu")
+        data = get_data_from_server(url)
+        cache[url] = data
+        return data
