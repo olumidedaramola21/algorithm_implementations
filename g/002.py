@@ -56,3 +56,38 @@
 #         data = get_data_from_server(url)
 #         cache[url] = data
 #         return data
+
+
+# Recursion
+# -Base Case and Recursive Case makes recursion work
+
+
+# The call stack
+# def greet2(name):
+#     print("how are you, " + name + "?")
+
+
+# def bye():
+#     print("ok bye")
+
+
+# def greet(name):
+#     print("hello " + name)
+#     greet2(name)
+#     print("gretting ready to say bye..")
+#     bye()
+
+
+# greet("Olumide")
+
+
+# Recursive function with call stack
+def fact(x):
+    if x == 1:
+        return 1
+    else:
+        return x * fact(x - 1)
+
+
+b = fact(5)
+print(b)
