@@ -1325,16 +1325,16 @@
 # print(result)  # Output will be [0, 1] because nums[0] + nums[1] = 2 + 7 = 9
 
 
-from collections import defaultdict
-from numbers import Number
+# from collections import defaultdict
+# from numbers import Number
 
-n = [0, 1, 2]
-b = [9, 0, 1]
-res = defaultdict(list)
-res[tuple(n)].append(3)
-res[tuple(b)].append(4)
-# res[tuple(b)].append(5)
-print(res.values())
+# n = [0, 1, 2]
+# b = [9, 0, 1]
+# res = defaultdict(list)
+# res[tuple(n)].append(3)
+# res[tuple(b)].append(4)
+# # res[tuple(b)].append(5)
+# print(res.values())
 
 
 # count = [[0, 1], [2, 3]]
@@ -1352,3 +1352,6 @@ print(res.values())
 # res[tuple(count)].append(s)
 
 # print(res.values())
+numbers = [9, 8, 7]
+for i in range(len(numbers)):
+    print(i)
