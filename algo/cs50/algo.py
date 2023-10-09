@@ -1,12 +1,12 @@
 def guess():
-    numbers = [20, 500, 10, 5, 100, 1, 50]
+    strings = ["battleship", "boot", "cannon", "iron", "thimble", "top hat"]
 
     try:
-        n = int(input("number: "))
+        n = input("string: ")
     except ValueError:
         print("Invalid input, Please put a valid input")
 
-    for i in numbers:
+    for i in strings:
         if i == n:
             print("Found")
             return 0
