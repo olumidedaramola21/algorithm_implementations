@@ -6,10 +6,13 @@ def get_height():
     draw(height)
 
 
-def draw(h):
-    for n in range(h):
-        for v in range(n + 1):
-            print(f"#")
+# Recursion is so nice
+def draw(h, n=0):
+    if h == n:
+        return
+    row = "#" * (n + 1)
+    print(row)
+    draw(h, n + 1)
 
 
 get_height()
