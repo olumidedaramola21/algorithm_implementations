@@ -5,6 +5,7 @@
 # Pick the scores of any k students from the array so that the difference between the highest and the lowest of the k scores is minimized.
 
 # Return the minimum possible difference.
+from typing import List
 
 
 class Solution:
