@@ -1,0 +1,5 @@
+digraph {
+	program [height=0.7 shape=box3d width=1]
+	inputs -> program
+	program -> results
+}
